@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservar turno | Chami's, salón de uñas y academia en Temperley</title>
+  <meta name="description" content="Reservá tu turno de uñas o tu lugar en una capacitación en Chami's, Temperley.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner">
+<div id="site-header"></div>
+<main>
+  <section class="page-hero">
+    <h1>Reservá tu turno</h1>
+    <p>Completá el formulario y se abre WhatsApp con tu mensaje listo para enviar. Yamila te confirma el horario a la brevedad.</p>
+  </section>
+  <section class="section">
+    <div class="wrap booking">
+      <div>
+        <address>
+          <strong>Chami's · Salón de uñas &amp; academia</strong><br>
+          Av. Alte Brown 3444, Temperley<br>
+          <a href="https://wa.me/5491123935032" target="_blank" rel="noopener">WhatsApp 11 2393-5032</a><br>
+          <a href="https://www.instagram.com/chamis.nails/" target="_blank" rel="noopener">@chamis.nails</a>
+        </address>
+        <div class="map-wrap">
+          <iframe title="Mapa del salón" loading="lazy" src="https://www.google.com/maps?q=Av.+Alte+Brown+3444,+Temperley&output=embed"></iframe>
+        </div>
+      </div>
+      <form id="form" novalidate>
+        <label>Nombre y apellido
+          <input type="text" id="nombre" required autocomplete="name">
+        </label>
+        <label>Quiero reservar
+          <select id="servicio" required>
+            <option value="">Elegí una opción</option>
+            <optgroup label="Turnos de uñas"></optgroup>
+            <optgroup label="Capacitaciones">
+              <option>Curso: Taller inicial de semipermanente</option>
+              <option>Curso: Manicuría profesional</option>
+              <option>Curso: Experta en refuerzos</option>
+            </optgroup>
+          </select>
+        </label>
+        <div class="row" id="fechaHora">
+          <label>Día preferido
+            <input type="date" id="fecha">
+          </label>
+          <label>Horario
+            <select id="hora">
+              <option value="">A coordinar</option>
+              <option>Mañana</option><option>Tarde</option>
+            </select>
+          </label>
+        </div>
+        <label>Comentarios (opcional)
+          <textarea id="msg" rows="3"></textarea>
+        </label>
+        <p class="error" id="error" role="alert" hidden>Completá tu nombre y elegí qué querés reservar.</p>
+        <button type="submit" class="btn">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="services-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
